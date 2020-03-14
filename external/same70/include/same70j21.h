@@ -415,6 +415,7 @@ void XDMAC_Handler                 ( void );
 #include "component/efc.h"
 #include "component/gmac.h"
 #include "component/gpbr.h"
+#include "component/hsmci.h"
 #include "component/icm.h"
 #include "component/isi.h"
 #include "component/matrix.h"
@@ -457,6 +458,7 @@ void XDMAC_Handler                 ( void );
 #include "instance/efc.h"
 #include "instance/gmac.h"
 #include "instance/gpbr.h"
+#include "instance/hsmci.h"
 #include "instance/icm.h"
 #include "instance/isi.h"
 #include "instance/matrix.h"
@@ -472,6 +474,8 @@ void XDMAC_Handler                 ( void );
 #include "instance/rswdt.h"
 #include "instance/rtc.h"
 #include "instance/rtt.h"
+#include "instance/spi0.h"
+#include "instance/spi1.h"
 #include "instance/ssc.h"
 #include "instance/supc.h"
 #include "instance/tc0.h"
@@ -513,6 +517,7 @@ void XDMAC_Handler                 ( void );
 #define ID_USART0       ( 13) /**< \brief Universal Synchronous Asynchronous Receiver Transmitter (USART0) */
 #define ID_USART1       ( 14) /**< \brief Universal Synchronous Asynchronous Receiver Transmitter (USART1) */
 #define ID_PIOD         ( 16) /**< \brief Parallel Input/Output Controller (PIOD) */
+#define ID_HSMCI        ( 18) /**< \brief Multimedia Card Interface (HSMCI) */
 #define ID_TWIHS0       ( 19) /**< \brief Two-wire Interface High Speed (TWIHS0) */
 #define ID_TWIHS1       ( 20) /**< \brief Two-wire Interface High Speed (TWIHS1) */
 #define ID_SPI0         ( 21) /**< \brief Serial Peripheral Interface 0 (SPI0) */
@@ -589,6 +594,7 @@ void XDMAC_Handler                 ( void );
 #define EFC                    (0x400E0C00)                   /**< \brief (EFC       ) Base Address */
 #define GMAC                   (0x40050000)                   /**< \brief (GMAC      ) Base Address */
 #define GPBR                   (0x400E1890)                   /**< \brief (GPBR      ) Base Address */
+#define HSMCI                  (0x40000000)                   /**< \brief (HSMCI ) Base Address */
 #define ICM                    (0x40048000)                   /**< \brief (ICM       ) Base Address */
 #define ISI                    (0x4004C000)                   /**< \brief (ISI       ) Base Address */
 #define MATRIX                 (0x40088000)                   /**< \brief (MATRIX    ) Base Address */
@@ -659,6 +665,10 @@ void XDMAC_Handler                 ( void );
 #define GPBR                   ((Gpbr *)0x400E1890U)          /**< \brief (GPBR      ) Base Address */
 #define GPBR_INST_NUM          1                              /**< \brief (GPBR      ) Number of instances */
 #define GPBR_INSTS             { GPBR }                       /**< \brief (GPBR      ) Instances List */
+
+#define HSMCI                  ((Hsmci *)0x40000000U)         /**< \brief (HSMCI ) Base Address */
+#define HSMCI_INST_NUM         1                              /**< \brief (HSMCI       ) Number of instances */
+#define HSMCI_INSTS            { HSMCI }                      /**< \brief (HSMCI       ) Instances List */
 
 #define ICM                    ((Icm *)0x40048000U)           /**< \brief (ICM       ) Base Address */
 #define ICM_INST_NUM           1                              /**< \brief (ICM       ) Number of instances */

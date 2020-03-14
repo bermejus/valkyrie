@@ -47,6 +47,7 @@ CPP_FILES=(
     "src/drivers/clock/sysclk.cpp"
     "src/drivers/delay/delay.cpp"
     "src/drivers/flash/flash.cpp"
+    "src/drivers/hsmci/hsmci.cpp"
     "src/drivers/irq/irq.cpp"
     "src/drivers/led/led.cpp"
     "src/drivers/pio/pio.cpp"
