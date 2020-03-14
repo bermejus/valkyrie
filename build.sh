@@ -43,6 +43,7 @@ C_FILES=(
 
 CPP_FILES=(
     "external/same70/init.cpp"
+    "src/drivers/buzzer/buzzer.cpp"
     "src/drivers/clock/sysclk.cpp"
     "src/drivers/delay/delay.cpp"
     "src/drivers/irq/irq.cpp"
