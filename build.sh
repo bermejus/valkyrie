@@ -14,9 +14,20 @@ LINKER_SCRIPT="external/same70/same70j21_flash.ld"
 C_FILES=(
     "external/same70/startup_same70j21.c"
     "external/same70/system_same70j21.c"
+    "src/utils/syscalls.c"
 )
 
 CPP_FILES=(
+    "external/same70/init.cpp"
+    "src/drivers/clock/sysclk.cpp"
+    "src/drivers/delay/delay.cpp"
+    "src/drivers/irq/irq.cpp"
+    "src/drivers/led/led.cpp"
+    "src/drivers/pio/pio.cpp"
+    "src/drivers/pio/pio_handler.cpp"
+    "src/drivers/pmc/pmc.cpp"
+    "src/drivers/pwm/pwm.cpp"
+    "src/utils/timer.cpp"
     "src/main.cpp"
 )
 
@@ -28,6 +39,7 @@ C_INCLUDES=(
 CPP_INCLUDES=(
     "-Iexternal/same70/include"
     "-Iexternal/CMSIS/include"
+    "-Isrc"
 )
 
 # If build directory exists erase its content, create it otherwise.

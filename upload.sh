@@ -1,0 +1,1 @@
+../sam-ba/sam-ba -x same70.qml
