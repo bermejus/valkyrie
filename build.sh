@@ -54,6 +54,7 @@ CPP_FILES=(
     "src/drivers/pio/pio_handler.cpp"
     "src/drivers/pmc/pmc.cpp"
     "src/drivers/pwm/pwm.cpp"
+    "src/drivers/sdcard/sdcard.cpp"
     "src/drivers/spi/spi.cpp"
     "src/drivers/tc/tc.cpp"
     "src/drivers/twihs/twihs.cpp"
