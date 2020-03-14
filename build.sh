@@ -52,6 +52,7 @@ CPP_FILES=(
     "src/drivers/pio/pio_handler.cpp"
     "src/drivers/pmc/pmc.cpp"
     "src/drivers/pwm/pwm.cpp"
+    "src/drivers/tc/tc.cpp"
     "src/utils/timer.cpp"
     "src/main.cpp"
 )
