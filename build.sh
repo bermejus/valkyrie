@@ -38,6 +38,10 @@ LINKER_SCRIPT="external/same70/same70j21_flash.ld"
 C_FILES=(
     "external/same70/startup_same70j21.c"
     "external/same70/system_same70j21.c"
+    "src/drivers/fatfs/diskio.c"
+    "src/drivers/fatfs/ff.c"
+    "src/drivers/fatfs/ffsystem.c"
+    "src/drivers/fatfs/ffunicode.c"
     "src/utils/syscalls.c"
 )
 
@@ -46,6 +50,7 @@ CPP_FILES=(
     "src/drivers/buzzer/buzzer.cpp"
     "src/drivers/clock/sysclk.cpp"
     "src/drivers/delay/delay.cpp"
+    "src/drivers/fatfs/internal_io.cpp"
     "src/drivers/flash/flash.cpp"
     "src/drivers/hsmci/hsmci.cpp"
     "src/drivers/irq/irq.cpp"
