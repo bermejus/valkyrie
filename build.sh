@@ -53,6 +53,7 @@ CPP_FILES=(
     "src/drivers/pmc/pmc.cpp"
     "src/drivers/pwm/pwm.cpp"
     "src/drivers/tc/tc.cpp"
+    "src/drivers/xdmac/xdmac.cpp"
     "src/utils/timer.cpp"
     "src/main.cpp"
 )

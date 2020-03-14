@@ -2461,7 +2461,7 @@ typedef struct {
   __I  uint32_t XDMAC_GSWS;     /**< (XDMAC Offset: 0x3C) Global Channel Software Request Status Register */
   __O  uint32_t XDMAC_GSWF;     /**< (XDMAC Offset: 0x40) Global Channel Software Flush Request Register */
   __I  uint8_t                        Reserved1[12];
-       XdmacChid XdmacChid[XDMACCHID_NUMBER]; /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
+       XdmacChid XDMAC_CHID[XDMACCHID_NUMBER]; /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
 } Xdmac;
 
 #elif COMPONENT_TYPEDEF_STYLE == 'N'
