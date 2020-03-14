@@ -13,7 +13,6 @@ print_help_message() {
     echo $'\t'-u, --upload$'\t\t'upload generated code through sam-ba
     echo
     echo "Report bugs in https://github.com/bermejus/valkyrie/issues"
-
 }
 
 for arg in $@; do
