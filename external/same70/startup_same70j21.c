@@ -243,6 +243,9 @@ void Reset_Handler(void)
         /* Initialize the C library */
         __libc_init_array();
 
+        /* CMSIS System Initialization */
+	SystemInit();
+
         /* Branch to main function */
         main();
 
@@ -255,6 +258,5 @@ void Reset_Handler(void)
  */
 void Dummy_Handler(void)
 {
-        while (1) {
-        }
+        while (1) {}
 }

@@ -40,6 +40,7 @@ extern uint32_t SystemCoreClock;   /*!< System Clock Frequency (Core Clock)  */
 
 void SystemInit(void);
 void SystemCoreClockUpdate(void);
+void system_init_flash(uint32_t dw_clk);
 
 #ifdef __cplusplus
 }
