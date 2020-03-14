@@ -1,5 +1,30 @@
 #!/bin/bash
 
+set -e
+
+print_help_message() {
+    echo "build.sh is a script for building valkyrie code"
+    echo
+    echo "Usage: build.sh <arguments...>"
+    echo
+    echo "Possible arguments are:"
+    echo
+    echo $'\t'-h, --help$'\t\t'display "help" message
+    echo $'\t'-u, --upload$'\t\t'upload generated code through sam-ba
+    echo
+    echo "Report bugs in https://github.com/bermejus/valkyrie/issues"
+
+}
+
+for arg in $@; do
+    if [ "$arg" == "-u" ] || [ "$arg" == "--upload" ]; then
+        UPLOAD=true
+    elif [ "$arg" == "-h" ] || [ "$arg" == "--help" ]; then
+        print_help_message
+        exit
+    fi
+done
+
 TOOLCHAIN_PATH="/opt/gcc-arm-none-eabi-9-2019-q4-major"
 GPP="$TOOLCHAIN_PATH/bin/arm-none-eabi-g++"
 GCC="$TOOLCHAIN_PATH/bin/arm-none-eabi-gcc"
@@ -61,3 +86,7 @@ rm ${objects}
 
 $GPP -s -Wl,--entry=Reset_Handler ${CPP_FLAGS} build/drivers.o ${CPP_FILES[@]} ${CPP_INCLUDES[@]} --specs=nosys.specs -T ${LINKER_SCRIPT} -o build/code.elf
 $OBJCOPY -O binary build/code.elf build/code.bin
+
+if [ "$UPLOAD" == true ]; then
+    ../sam-ba/sam-ba -x same70.qml
+fi
