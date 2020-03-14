@@ -427,6 +427,7 @@ void XDMAC_Handler                 ( void );
 #include "component/rswdt.h"
 #include "component/rtc.h"
 #include "component/rtt.h"
+#include "component/spi.h"
 #include "component/ssc.h"
 #include "component/supc.h"
 #include "component/tc.h"
@@ -514,6 +515,7 @@ void XDMAC_Handler                 ( void );
 #define ID_PIOD         ( 16) /**< \brief Parallel Input/Output Controller (PIOD) */
 #define ID_TWIHS0       ( 19) /**< \brief Two-wire Interface High Speed (TWIHS0) */
 #define ID_TWIHS1       ( 20) /**< \brief Two-wire Interface High Speed (TWIHS1) */
+#define ID_SPI0         ( 21) /**< \brief Serial Peripheral Interface 0 (SPI0) */
 #define ID_SSC          ( 22) /**< \brief Synchronous Serial Controller (SSC) */
 #define ID_TC0_CHANNEL0 ( 23) /**< \brief Timer Counter (TC0_CHANNEL0) */
 #define ID_TC0_CHANNEL1 ( 24) /**< \brief Timer Counter (TC0_CHANNEL1) */
@@ -530,6 +532,7 @@ void XDMAC_Handler                 ( void );
 #define ID_MCAN0        ( 35) /**< \brief Controller Area Network (MCAN0) */
 #define ID_GMAC         ( 39) /**< \brief Gigabit Ethernet MAC (GMAC) */
 #define ID_AFEC1        ( 40) /**< \brief Analog Front-End Controller (AFEC1) */
+#define ID_SPI1         ( 42) /**< \brief Serial Peripheral Interface 1 (SPI1) */
 #define ID_QSPI         ( 43) /**< \brief Quad Serial Peripheral Interface (QSPI) */
 #define ID_UART2        ( 44) /**< \brief Universal Asynchronous Receiver Transmitter (UART2) */
 #define ID_TC2_CHANNEL0 ( 47) /**< \brief Timer Counter (TC2_CHANNEL0) */
@@ -597,6 +600,8 @@ void XDMAC_Handler                 ( void );
 #define PWM0                   (0x40020000)                   /**< \brief (PWM0      ) Base Address */
 #define PWM1                   (0x4005C000)                   /**< \brief (PWM1      ) Base Address */
 #define QSPI                   (0x4007C000)                   /**< \brief (QSPI      ) Base Address */
+#define SPI0                   (0x40008000)                   /**< \brief (SPI0  ) Base Address */
+#define SPI1                   (0x40058000)                   /**< \brief (SPI1  ) Base Address */
 #define RSTC                   (0x400E1800)                   /**< \brief (RSTC      ) Base Address */
 #define RSWDT                  (0x400E1900)                   /**< \brief (RSWDT     ) Base Address */
 #define RTC                    (0x400E1860)                   /**< \brief (RTC       ) Base Address */
@@ -705,6 +710,11 @@ void XDMAC_Handler                 ( void );
 #define RTT                    ((Rtt *)0x400E1830U)           /**< \brief (RTT       ) Base Address */
 #define RTT_INST_NUM           1                              /**< \brief (RTT       ) Number of instances */
 #define RTT_INSTS              { RTT }                        /**< \brief (RTT       ) Instances List */
+
+#define SPI0                   ((Spi *)0x40008000U)           /**< \brief (SPI0  ) Base Address */
+#define SPI1                   ((Spi *)0x40058000U)           /**< \brief (SPI1  ) Base Address */
+#define SPI_INST_NUM           2                              /**< \brief (QSPI      ) Number of instances */
+#define SPI_INSTS              { SPI0, SPI1 }                 /**< \brief (QSPI      ) Instances List */
 
 #define SSC                    ((Ssc *)0x40004000U)           /**< \brief (SSC       ) Base Address */
 #define SSC_INST_NUM           1                              /**< \brief (SSC       ) Number of instances */
